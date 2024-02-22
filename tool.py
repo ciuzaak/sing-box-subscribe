@@ -160,7 +160,7 @@ def rename(input_str):
         if input_str.startswith(country_code):
             return country_code + ' ' + input_str[len(country_code):].strip()
         if pattern.search(input_str):
-            if input_str.startswith('🇺🇲'):
+            if input_str.startswith(('🇺🇲', '🇨🇳')):
                 return country_code + ' ' + input_str[len('🇺🇲'):].strip()
             else:
                 return country_code + ' ' + input_str
